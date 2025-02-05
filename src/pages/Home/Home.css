@@ -1,0 +1,23 @@
+  /* Home Page Styles */
+  .home {
+    padding: 20px;
+    background-image: var(--bg-image);
+    background-size: cover;
+    transition: all 1s ease-in-out;
+  }
+
+ 
+
+
+  #home-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1rem;
+    padding: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+  }
