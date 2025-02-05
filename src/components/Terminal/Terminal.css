@@ -19,8 +19,11 @@
   height: 480px;
   border-radius: 8px;
   flex-grow: 1;
+  overflow-y: auto;
 }
-
+.terminal::-webkit-scrollbar{
+ display: none;
+}
 .title {
   color:var(--accent-color);
   font-weight: bold;

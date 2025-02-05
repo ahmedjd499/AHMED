@@ -8,7 +8,7 @@ export const HelpCommand = () => {
       <p>Commands:</p>
       <ul>
         <li><strong>help</strong> - Show this help message</li>
-        <li><strong>about</strong> - Navigate to the About section</li>
+        <li><strong>facts</strong> - Navigate to the About section</li>
         <li><strong>projects</strong> - Navigate to the Projects section</li>
         <li><strong>contact</strong> - Navigate to the Contact section</li>
         <li><strong>clear</strong> - Clear the terminal</li>
@@ -20,7 +20,7 @@ export const HelpCommand = () => {
 export const FactsCommand = () => {
   return (
     <div className="command-output">
- <p className="title">Hello! I'm Ashleigh GB</p>
+ <p className="title">Hello! I'm Ahmed ben Khlifa JD</p>
           <p>Here's some facts about me:</p>
           <p className="web-dev">✔ Web Developer</p>
           <p className="app-dev">✔ App Developer</p>

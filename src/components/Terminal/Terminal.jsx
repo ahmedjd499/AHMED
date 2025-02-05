@@ -73,8 +73,8 @@ const Terminal = () => {
       {/* Render static content only if showStatic is true */}
       {showStatic && (
         <>
-          <p className="title">Hello! I'm Ashleigh GB</p>
-          <p>Here's some facts about me:</p>
+          <p className="title">Hello! I'm Ahmed ben Khlifa JD</p>
+          <p> Here's some facts about me:</p>
           <p className="web-dev">✔ Web Developer</p>
           <p className="app-dev">✔ App Developer</p>
           <p className="typescript">✔ TypeScript Expert</p>
