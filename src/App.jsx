@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState, useEffect } from 'react';
+import React, {  } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Project from './pages/Project/Project';
@@ -9,7 +9,9 @@ function App() {
   
 
   return (
-    <Router>
+
+    
+    <Router basename='/AHMED'>
       <Navbar />
 
       <Routes>
