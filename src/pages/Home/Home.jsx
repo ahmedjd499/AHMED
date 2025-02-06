@@ -3,6 +3,7 @@ import React from 'react';
 import Terminal from '../../components/Terminal/Terminal';
 import './Home.css';
 import Monitor from '../../components/Monitor/Monitor';
+import About from '../../components/About/About';
 function Home() {
   
 
@@ -13,12 +14,7 @@ function Home() {
       <Monitor />
       <Terminal />
       </section>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hello! I am Ahmed, a passionate web developer with experience in building interactive web applications.
-        </p>
-      </section>
+      <About />
       <section id="projects">
         <h2>Projects</h2>
         <p>Here are some of my projects:</p>

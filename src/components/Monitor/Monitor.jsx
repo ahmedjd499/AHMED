@@ -1,10 +1,21 @@
 // src/components/Terminal.jsx
 import './Monitor.css';
+import { useInView } from 'react-intersection-observer';
+import { useSpring, animated } from 'react-spring';
+function Monitor() {
+  const { ref, inView } = useInView({
+    // triggerOnce: true, // Set to true to trigger only once
+    threshold: 0.1, // Adjust this value as needed
+  });
 
-function Monitor({ handleCommand }) {
-
+  const bounceAnimation = useSpring({
+    transform: inView ? 'translateX(0px)' : 'translateX(-50px)', // Bounce effect
+    opacity: inView ? 1 : 0, // Fade-in effect
+    config: { tension: 200, friction: 12 }, // Adjust tension and friction for bounce
+  });
   return (
-    <div className="setup">
+    <animated.div ref={ref} style={bounceAnimation} className=" setuo bounce-element">
+
       <div className="monitor">
         <div className="screen">
           <div className="content">
@@ -25,7 +36,7 @@ function Monitor({ handleCommand }) {
           </div>
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 }
 
