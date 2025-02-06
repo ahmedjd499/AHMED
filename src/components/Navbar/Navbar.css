@@ -12,11 +12,34 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.nav-brand {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center the items */
+}
+
 .nav-brand a {
+  text-decoration: none; /* Remove underline from the link */
+  display: flex; /* Use flex for proper alignment */
+  align-items: center; /* Vertically center the text and the span */
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--accent-color);
   text-decoration: none;
+  width: 150px;
+}
+
+.logo-name {
+  display: inline-block;
+  width: 0; /* Start with zero width */
+  overflow: hidden; /* Hide overflow */
+  transition: all 1s ease; /* Animate the width */
+  visibility: hidden; /* Hide the element */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav-brand:hover .logo-name {
+  width: auto; /* Set to auto width on hover */
+  visibility: visible; /* Make it visible */
 }
 
 .nav-links {
@@ -36,11 +59,15 @@
   font-size: 1.1rem;
   font-weight: 500;
   transition: color 0.3s ease;
+  padding: 10px; /* Add some padding for spacing */
 }
 
-.nav-links a:hover {
-  color: var(--accent-color);
+.nav-links a:hover,.nav-links a.active {
+  color: var(--accent-color);  font-weight: bold; /* Make the active link bold */
+  border-bottom: 2px solid var(--accent-color); /* Optional: underline effect */
 }
+
+
 
 
 

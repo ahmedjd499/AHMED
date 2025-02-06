@@ -1,4 +1,4 @@
-// src/components/Navbar.jsx
+// src/components/Navbar/Navbar.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
@@ -16,30 +16,28 @@ function Navbar() {
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
+
   return (
     <nav className="navbar">
       <div className="nav-brand">
-        {/* You can link to the home page */}
-        <Link to="/"> {"< A/ >"} </Link>
+        <Link to="/"> {"< A/"} <span className='logo-name'>HMED</span> {" >"} </Link>
       </div>
       <ul className="nav-links">
-      <li>
-          <a href="">Home</a>
+        <li>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#about">About</a>
+          <Link to="/#about">About</Link>
         </li>
         <li>
-          <a href="#projects">Projects</a>
+          <Link to="/#projects">Projects</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link to="/#contact">Contact</Link>
         </li>
       </ul>
-      <div className=" theme-toggle" onClick={toggleTheme}>
-        <img src={theme === 'light' ? sun : moon}
-          alt="toggle theme">
-        </img>
+      <div className="theme-toggle" onClick={toggleTheme}>
+        <img src={theme === 'light' ? sun : moon} alt="toggle theme" />
       </div>
     </nav>
   );

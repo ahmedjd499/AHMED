@@ -3,31 +3,33 @@ import "./About.css";
 import { useInView } from 'react-intersection-observer';
 import { useSpring, animated } from 'react-spring';
 
+const importAsset = (fileName) => new URL(`../../assets/${fileName}`, import.meta.url).href;
+
 const skillsFront = [
-    { name: "React", icon: "react-original-wordmark.svg" },
-    { name: "Angular", icon: "angular.svg" },
-    { name: "HTML", icon: "html5-original.svg" },
-    { name: "CSS", icon: "css3-plain.svg" },
-    { name: "JavaScript", icon: "javascript-original.svg" },
-    { name: "Bootstrap", icon: "bootstrap.svg" },
-    { name: "Tailwind", icon: "tailwindcss-icon.svg" },
+    { name: "React", icon: importAsset("react-original-wordmark.svg") },
+    { name: "Angular", icon: importAsset("angular.svg") },
+    { name: "HTML", icon: importAsset("html5-original.svg") },
+    { name: "CSS", icon: importAsset("css3-plain.svg") },
+    { name: "JavaScript", icon: importAsset("javascript-original.svg") },
+    { name: "Bootstrap", icon: importAsset("bootstrap.svg") },
+    { name: "Tailwind", icon: importAsset("tailwindcss-icon.svg") },
 ];
 
 const skillsBack = [
-    { name: "NodeJS", icon: "nodejs-original-wordmark.svg" },
-    { name: "TypeScript", icon: "typescript-original.svg" },
-    { name: "Php", icon: "php.svg" },
-    { name: "Symfony", icon: "symfony.svg" },
+    { name: "NodeJS", icon: importAsset("nodejs-original-wordmark.svg") },
+    { name: "TypeScript", icon: importAsset("typescript-original.svg") },
+    { name: "Php", icon: importAsset("php.svg") },
+    { name: "Symfony", icon: importAsset("symfony.svg") },
 ];
 
 const tools = [
-    { name: "Vs Code", icon: "vs-code.svg" },
-    { name: "MySQL", icon: "mysql.svg" },
-    { name: "MongoDB", icon: "mongodb-plain.svg" },
-    { name: "Postman", icon: "getpostman-icon.svg" },
-    { name: "Docker", icon: "docker.svg" },
-    { name: "Git", icon: "git-plain.svg" },
-    { name: "Linux", icon: "linux.svg" },
+    { name: "Vs Code", icon: importAsset("vs-code.svg") },
+    { name: "MySQL", icon: importAsset("mysql.svg") },
+    { name: "MongoDB", icon: importAsset("mongodb-plain.svg") },
+    { name: "Postman", icon: importAsset("getpostman-icon.svg") },
+    { name: "Docker", icon: importAsset("docker.svg") },
+    { name: "Git", icon: importAsset("git-plain.svg") },
+    { name: "Linux", icon: importAsset("linux.svg") },
 ];
 
 const About = () => {
@@ -55,7 +57,8 @@ const About = () => {
 
     return (
         <div className="about-container" id="about">
-            <animated.h2 ref={textRef} style={fadeAnimation}>About Me</animated.h2>
+            <animated.h1 ref={textRef} style={fadeAnimation}>About Me</animated.h1>
+            <animated.h3 ref={textRef} style={fadeAnimation}>A bit about me</animated.h3>
             <animated.p ref={textRef} style={fadeAnimation}>
                 Hello! I'm Ahmed Jaidi, a passionate full-stack web developer from Tunisia,
                 dedicated to crafting seamless digital experiences.<br />
@@ -73,7 +76,7 @@ const About = () => {
             <animated.div ref={bounceRef} style={bounceAnimation} className="skills-container bounce-element">
                 {skillsFront.map((skill) => (
                     <div key={skill.name} className="skill bounce">
-                        <img src={`/src/assets/${skill.icon}`} alt={skill.name} />
+                        <img src={skill.icon} alt={skill.name} />
                         <p>{skill.name}</p>
                     </div>
                 ))}
@@ -83,7 +86,7 @@ const About = () => {
             <animated.div ref={bounceRef} style={bounceAnimation} className="skills-container bounce-element">
                 {skillsBack.map((skill) => (
                     <div key={skill.name} className="skill bounce">
-                        <img src={`/src/assets/${skill.icon}`} alt={skill.name} />
+                        <img src={skill.icon} alt={skill.name} />
                         <p>{skill.name}</p>
                     </div>
                 ))}
@@ -93,7 +96,7 @@ const About = () => {
             <animated.div ref={bounceRef} style={bounceAnimation} className="skills-container bounce-element">
                 {tools.map((skill) => (
                     <div key={skill.name} className="skill bounce">
-                        <img src={`/src/assets/${skill.icon}`} alt={skill.name} />
+                        <img src={skill.icon} alt={skill.name} />
                         <p>{skill.name}</p>
                     </div>
                 ))}
